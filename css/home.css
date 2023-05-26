@@ -557,7 +557,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 100000000000000000000;
 }
 header .header {
   display: flex;
@@ -688,6 +688,10 @@ header .header .user {
   color: #606060;
 }
 
+img {
+  border-radius: 4px 4px 0 0;
+}
+
 /* --------------------------------- */
 #promotion-card .promotion__box {
   display: flex;
@@ -709,6 +713,17 @@ header .header .user {
 }
 #promotion-card .promotion__box .promotion__cards .img {
   width: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+#promotion-card .promotion__box .promotion__cards .discount {
+  position: absolute;
+  left: 10px;
+  top: 120px;
+  background: #ff6633;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: white;
 }
 #promotion-card .promotion__box .promotion__cards .promotion__price {
   display: flex;
@@ -729,6 +744,10 @@ header .header .user {
 }
 #promotion-card .promotion__box .promotion__cards .promotion__star {
   padding: 0px 0px 8px 8px;
+  display: flex;
+}
+#promotion-card .promotion__box .promotion__cards .promotion__star img {
+  width: 16px;
 }
 #promotion-card .promotion__box .promotion__cards .promotion_btn {
   border: 1px solid #70c05b;
@@ -782,6 +801,10 @@ header .header .user {
   border-radius: 4px;
   background-color: #ffffff;
   transition: 0.3s;
+}
+#new-card .new__box .new__card .new_star img {
+  width: 16px;
+  display: inline;
 }
 #new-card .new__box .new__card:hover {
   box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
@@ -961,6 +984,46 @@ header .header .user {
   background: #70c05b;
   border-radius: 4px;
   color: #ffffff;
+}
+
+/* --------------------------------- */
+.show {
+  opacity: 1 !important;
+  top: 80px !important;
+}
+
+.wrapper {
+  opacity: 0;
+  position: fixed;
+  padding: 20px 0 40px;
+  transition: 0.8s ease all;
+  animation: inputHighlighter 0.3s ease;
+  top: -300px;
+  z-index: -200;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+.wrapper .Dropdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  gap: 40px;
+}
+.wrapper .drops {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+}
+.wrapper .drops a {
+  color: #414141;
+  transition: 0.2s;
+}
+.wrapper .drops a:hover {
+  color: #ff6633;
 }
 
 /* --------------------------------- */
