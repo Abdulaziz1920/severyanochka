@@ -1,12 +1,112 @@
 /*---------------ARRAY---------------*/
+// / хлеб
 const product = [
+  {
+    id: 1,
+    name: "Butter",
+    category: "Milky",
+    description: "Сли́вочное ма́сло — пищевой продукт,",
+    price: "8.99$",
+    rating: 5,
+    discount: 10,
+    image: "./Assets/images/Arr_image/1.png",
+  },
+  {
+    id: 2,
+    name: "Coffee",
+    category: "Tea",
+    description: "Ранее кофейные деревья достигали 9 метров.",
+    price: "7.99$",
+    rating: 5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/2.png",
+  },
+  {
+    id: 3,
+    name: "Sousage",
+    category: "Meat",
+    description: "Колбаса́ — пищевой продукт, тип колбасных изделий.",
+    price: "8.99$",
+    rating: 5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/3.png",
+  },
+  {
+    id: 4,
+    name: "Broccoli",
+    category: "Vegetable",
+    description: "Мали́на — полукустарник; вид рода Рубус семейства Розовые.",
+    price: "4.99$",
+    rating: 4.5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/5.png",
+  },
+  {
+    id: 5,
+    name: "Strawberry",
+    category: "Fruits",
+    description: "Клубни́ка — название видов растений семейства Розовые.",
+    price: "8.99$",
+    rating: 5,
+    discount: 5,
+    image: "./Assets/images/Arr_image/6.png",
+  },
+  {
+    id: 6,
+    name: "Cake",
+    category: "Sweets",
+    description: "Торт - кондитерское изделие, состоящий из нескольких.",
+    price: "1.99$",
+    rating: 3.5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/7.png",
+  },
+  {
+    id: 7,
+    name: "Pepsi",
+    category: "Drink",
+    description: "Pepsi — газированный безалкогольный напиток.",
+    price: "6.99$",
+    rating: 3.5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/8.png",
+  },
+  {
+    id: 8,
+    name: "Apricot",
+    category: "Fruits",
+    description: "Абрико́с — плодовое дерево, рода Слива семейства Розовые..",
+    price: "6.99$",
+    rating: 4.5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/9.png",
+  },
+  {
+    id: 9,
+    name: "Cheese",
+    category: "Milky",
+    description: "Сыр — продукт в виде твёрдой или полутвёрдой массы.",
+    price: "8.99$",
+    rating: 5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/10.png",
+  },
+  {
+    id: 10,
+    name: "Nescafe",
+    category: "Tea",
+    description: "Nescafé — крупнейшая в мире торговая компании Nestlé.",
+    price: "7.99$",
+    rating: 4.5,
+    discount: 0,
+    image: "./Assets/images/Arr_image/11.png",
+  },
   {
     id: 11,
     name: "Kebab",
     category: "Food",
-    description:
-      "Шашлык считают блюдом кавказской кухни, и производят его название от тюрского слова 'шиш' - вертел. ",
-    price: "1.00$",
+    description: "Шашлык считают блюдом кавказской кухни. ",
+    price: "1.99$",
     rating: 5,
     discount: 10,
     image: "./Assets/images/Arr_image/12.png",
@@ -15,9 +115,8 @@ const product = [
     id: 22,
     name: "Juice",
     category: "Drink",
-    description:
-      "Сок — жидкий пищевой продукт, полученный в результате отжима съедобных спелых плодов овощных или фруктовых культур.",
-    price: "8.00$",
+    description: "Сок — жидкий пищевой продукт, фруктовых культур.",
+    price: "8.99$",
     rating: 5,
     discount: 20,
     image: "./Assets/images/Arr_image/23.png",
@@ -26,53 +125,48 @@ const product = [
     id: 23,
     name: "Pizza",
     category: "Fast Food",
-    description:
-      "Пи́цца итальянское национальное блюдо в виде круглой открытой лепешки.",
-    price: "7.00$",
+    description: "Пицца блюдо в виде круглой открытой лепешки.",
+    price: "7.99$",
     rating: 4.5,
-    discount: 20,
+    discount: 0,
     image: "./Assets/images/Arr_image/24.png",
   },
   {
     id: 24,
     name: "Apelsin",
     category: "Juice",
-    description:
-      "Апельси́н — плодовое дерево; вид рода Цитрус семейства Рутовые, а также плод этого дерева.",
-    price: "10.00$",
+    description: "Апельсин —  вид рода Цитрус семейства Рутовые.",
+    price: "10.99$",
     rating: 4.5,
-    discount: 0,
+    discount: 10,
     image: "./Assets/images/Arr_image/25.png",
   },
   {
     id: 25,
     name: "Peach",
-    category: "Fruits",
-    description:
-      "Пе́рсик обыкновенный, или Персик — растение из подрода Миндаль рода Слива семейства Розовые.",
-    price: "8.50$",
+    category: "",
+    description: "Пе́рсик — растение из Миндаль рода Слива семейства Розовые.",
+    price: "8.99$",
     rating: 5,
-    discount: 20,
+    discount: 0,
     image: "./Assets/images/Arr_image/26.png",
   },
   {
     id: 26,
     name: "Fish",
     category: "Food",
-    description:
-      "Рыбы — обширная группа водных челюстноротых позвоночных животных, ранее считавшаяся надклассом.",
+    description: "Рыбы — группа водных позвоночных животных.",
     price: "27.00$",
     rating: 4,
-    discount: 0,
+    discount: 70,
     image: "./Assets/images/Arr_image/27.png",
   },
   {
     id: 27,
     name: "Ananas",
-    category: "Fruits",
-    description:
-      "Сезон ананасов длится круглый год. А это значит - в любое время вы можете купить его.",
-    price: "13.50$",
+    category: "",
+    description: "Сезон ананасов длится круглый год.",
+    price: "13.99$",
     rating: 4.5,
     discount: 20,
     image: "./Assets/images/Arr_image/28.png",
@@ -81,253 +175,127 @@ const product = [
     id: 28,
     name: "Coffee",
     category: "Tea",
-    description:
-      "Ко́фе — напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.",
-    price: "81.50$",
+    description: "Кофе — не роскошь, кофе — средство передвижения.",
+    price: "81.99$",
     rating: 4,
     discount: 20,
     image: "./Assets/images/Arr_image/29.png",
   },
   {
     id: 29,
-    name: "Spaghetti",
-    category: "Lunch",
-    description:
-      "Spaghetti is a type of pasta made from wheat flour and water, usually served with sauce.",
-    price: "96.50$",
-    rating: 4,
-    discount: 50,
+    name: "Jacobs",
+    category: "Tea",
+    description: "Кофе и хороший кофе — два абсолютно разных напитка.",
+    price: "6.99$",
+    rating: 3,
+    discount: 30,
     image: "./Assets/images/Arr_image/30.png",
   },
   {
     id: 30,
-    name: "Pizza",
-    category: "Lunch",
-    description:
-      "Pizza is a popular dish made from dough, sauce, cheese, and toppings.",
-    price: "95.50$",
-    rating: 4,
-    discount: 0,
+    name: "Dairy",
+    category: "Milky",
+    description: "Молоко́ — питательная жидкость.",
+    price: "2.99$",
+    rating: 2,
+    discount: 80,
     image: "./Assets/images/Arr_image/31.png",
   },
   {
     id: 31,
-    name: "Grilled Cheese",
-    category: "Lunch",
-    description:
-      "A grilled cheese sandwich is a hot sandwich made from cheese and bread.",
-    price: "10.50$",
+    name: "Chocolate",
+    category: "Sweets",
+    description: "Шоколад — кондитерское изделие на основе какао.",
+    price: "10.99$",
     rating: 5,
-    discount: 50,
+    discount: 0,
     image: "./Assets/images/Arr_image/32.png",
   },
   {
     id: 32,
-    name: "Steak",
-    category: "Dinner",
-    description:
-      "Steak is a popular dinner dish made from a cut of beef that is usually grilled or pan-fried.",
-    price: "63.50$",
+    name: "Pumpkin",
+    category: "Vegetable",
+    description: "Тыква необходима при отеках – сердечных и почечных.",
+    price: "3.99$",
     rating: 4.5,
-    discount: 20,
+    discount: 0,
     image: "./Assets/images/Arr_image/33.png",
   },
   {
     id: 33,
-    name: "Salmon",
-    category: "Dinner",
-    description:
-      "Salmon is a type of fish that is often grilled or baked and served as a main course.",
-    price: "8.50$",
+    name: "Kivi",
+    category: "Fruits",
+    description: "Киви — это значить что витамин C.",
+    price: "8.99$",
     rating: 5,
     discount: 20,
     image: "./Assets/images/Arr_image/34.png",
   },
   {
     id: 34,
-    name: "Chicken Alfredo",
-    category: "Dinner",
-    description:
-      "Chicken Alfredo is a pasta dish made with chicken, fettuccine pasta",
-    price: "94.50$",
+    name: "Pomegranate",
+    category: "Fruits",
+    description: "Гранат — вид плодовых растений из рода Гранат.",
+    price: "9.99$",
     rating: 4,
     discount: 20,
     image: "./Assets/images/Arr_image/35.png",
   },
   {
     id: 35,
-    name: "Lasagna",
-    category: "Dinner",
-    description:
-      "Lasagna is a type of pasta dish made with layers of pasta, sauce, cheese, and meat or vegetables.",
-    price: "70.50$",
+    name: "Melon",
+    category: "Plant",
+    description: "Ды́ня — растение семейства Тыквенные, бахчевая культура.",
+    price: "7.99$",
     rating: 5,
     discount: 0,
     image: "./Assets/images/Arr_image/36.png",
   },
   {
     id: 36,
-    name: "Chocolate Chip Cookies",
-    category: "Dessert",
-    description:
-      "Chocolate Chip Cookies are a type of cookie made from flour, sugar, butter, and chocolate chips.",
-    price: "98.50$",
+    name: "Watermelon",
+    category: "Dairy",
+    description: "Арбу́з шерстистый, или арбу́з столо́вый.",
+    price: "9.50$",
     rating: 3.5,
     discount: 0,
     image: "./Assets/images/Arr_image/37.png",
   },
-];
-const news = [
-  {
-    id: 1,
-    name: "Apple",
-    category: "Fruit",
-    description: "АКЦИЯ Свинина туш. Тактика 325г 36шт/уп",
-    price: "89.50$",
-    rating: 5,
-    discount: 0,
-    image: "./Assets/images/Arr_image/1.png",
-  },
-  {
-    id: 2,
-    name: "Banana",
-    category: "Fruit",
-    description:
-      "A long, curved fruit with a yellow skin and sweet, creamy white flesh.",
-    price: "71.50$",
-    rating: 5,
-    discount: 20,
-    image: "./Assets/images/Arr_image/2.png",
-  },
-  {
-    id: 3,
-    name: "Bread",
-    category: "Bakery",
-    description:
-      "A staple food made from flour, water, and yeast, baked into a loaf.",
-    price: "88.50$",
-    rating: 5,
-    discount: 20,
-    image: "./Assets/images/Arr_image/3.png",
-  },
-  {
-    id: 4,
-    name: "Broccoli",
-    category: "Vegetable",
-    description:
-      "A green vegetable with a tree-like appearance, known for its high nutrient content.",
-    price: "94.50$",
-    rating: 4.5,
-    discount: 20,
-    image: "./Assets/images/Arr_image/5.png",
-  },
-  {
-    id: 5,
-    name: "Carrot",
-    category: "Vegetable",
-    description:
-      "A root vegetable with a crunchy texture and a sweet, earthy flavor.",
-    price: "82.50$",
-    rating: 5,
-    discount: 20,
-    image: "./Assets/images/Arr_image/6.png",
-  },
-  {
-    id: 6,
-    name: "Cheese",
-    category: "Dairy",
-    description:
-      "A dairy product2 made from milk, with a variety of textures and flavors.",
-    price: "91.50$",
-    rating: 3.5,
-    discount: 50,
-    image: "./Assets/images/Arr_image/7.png",
-  },
-  {
-    id: 7,
-    name: "Chicken",
-    category: "Meat",
-    description:
-      "A type of poultry, often used as a source of protein in meals.",
-    price: "68.50$",
-    rating: 3.5,
-    discount: 20,
-    image: "./Assets/images/Arr_image/8.png",
-  },
-  {
-    id: 8,
-    name: "Chocolate",
-    category: "Dessert",
-    description:
-      "A sweet food made from cacao beans, used in a variety of desserts and confections.",
-    price: "61.50$",
-    rating: 4.5,
-    discount: 20,
-    image: "./Assets/images/Arr_image/9.png",
-  },
-  {
-    id: 9,
-    name: "Coffee",
-    category: "Dessert",
-    description:
-      "A dark, bitter beverage made from roasted coffee beans, typically used as a pick-me-up.",
-    price: "98.50$",
-    rating: 5,
-    discount: 20,
-    image: "./Assets/images/Arr_image/10.png",
-  },
-  {
-    id: 10,
-    name: "Egg",
-    category: "Dairy",
-    description:
-      "A oval-shaped reproduct2ive body produced by birds, often used as a source of protein in meals.",
-    price: "79.50$",
-    rating: 4.5,
-    discount: 0,
-    image: "./Assets/images/Arr_image/11.png",
-  },
-];
-const recently = [
   {
     id: 12,
-    name: "Grapes",
-    category: "Fruit",
-    description:
-      "A small, sweet fruit that grows in clusters, often used in wine-making.",
-    price: "61.50$",
-    rating: 4,
-    discount: 20,
+    name: "Hamburger",
+    category: "Fast food",
+    description: "Га́мбургер — это блюдо, обычно состоящее из котлеты/.",
+    price: "6.99$",
+    rating: 5,
+    discount: 0,
     image: "./Assets/images/Arr_image/13.png",
   },
   {
     id: 13,
-    name: "Hamburger",
-    category: "Fast food",
-    description:
-      "A sandwich made with a patty of ground beef, served on a bun with various toppings.",
-    price: "87.50$",
-    rating: 5,
-    discount: 0,
+    name: "Yoghurt",
+    category: "Milky",
+    description: "Йо́гурт — продукт с содержанием сухих веществ.",
+    price: "8.99$",
+    rating: 4.5,
+    discount: 10,
     image: "./Assets/images/Arr_image/14.png",
   },
   {
     id: 14,
-    name: "Hot dog",
-    category: "Fast food",
-    description:
-      "A type of sausage served in a long roll, often used as a quick and convenient food.",
-    price: "84.50$",
+    name: "Sour cream.",
+    category: "Milky",
+    description: "Смета́на — кисломолочный продукт белого цвета.",
+    price: "4.99$",
     rating: 4.5,
-    discount: 50,
+    discount: 0,
     image: "./Assets/images/Arr_image/15.png",
   },
   {
     id: 15,
-    name: "Ice cream",
-    category: "Dessert",
-    description:
-      "A frozen dessert made from cream, sugar, and flavorings, available in a variety of flavors.",
+    name: "Mandarin",
+    category: "Fruits",
+    description: "Мандари́н — вечнозелёное дерево, вид рода Цитрус",
     price: "68.50$",
     rating: 4.5,
     discount: 0,
@@ -335,66 +303,60 @@ const recently = [
   },
   {
     id: 16,
-    name: "Lemon",
-    category: "Fruit",
-    description:
-      "A yellow citrus fruit with a tart, acidic flavor, often used in cooking and baking.",
-    price: "74.50$",
+    name: "Apples",
+    category: "Fruits",
+    description: "Яблоко. Я́блоко — сочный плод яблони.",
+    price: "4.99$",
     rating: 3.5,
     discount: 0,
     image: "./Assets/images/Arr_image/17.png",
   },
   {
     id: 17,
-    name: "Eggs",
-    category: "Dairy",
-    description:
-      "Eggs are oval-shaped reproduct2ive structures produced by female birds and some reptiles.",
-    price: "70.50$",
+    name: "Bread",
+    category: "Bakery",
+    description: "Хлеб — сделано самим народом. Народное изделия",
+    price: "70.99$",
     rating: 4.5,
-    discount: 50,
+    discount: 0,
     image: "./Assets/images/Arr_image/18.png",
   },
   {
     id: 18,
-    name: "Honey",
-    category: "Dairy",
-    description:
-      "Honey is a sweet, sticky liquid made by bees from the nectar of flowers.",
-    price: "87.50$",
-    rating: 4,
+    name: "Coca cola",
+    category: "Drink",
+    description: "Coca-Cola — газированный безалкогольный напиток.",
+    price: "9.99$",
+    rating: 5,
     discount: 0,
     image: "./Assets/images/Arr_image/19.png",
   },
   {
     id: 19,
-    name: "Ice Cream",
-    category: "Dessert",
-    description:
-      "Ice cream is a frozen dessert made from cream, sugar, and flavorings.",
-    price: "83.50$",
-    rating: 4.5,
+    name: "Kebab",
+    category: "Food",
+    description: "Люля́-кеба́б — блюдо кухонь разных стран Ближнего Востока",
+    price: "15.99$",
+    rating: 5,
     discount: 0,
     image: "./Assets/images/Arr_image/20.png",
   },
   {
     id: 20,
-    name: "Jelly",
-    category: "Fruit",
-    description:
-      "Jelly is a sweet spread made from fruit juice and sugar, often used as a topping for toast or pastries.",
-    price: "76.50$",
+    name: "Compote",
+    category: "Drink",
+    description: "Компо́т — десертный напиток из фруктов или ягод.",
+    price: "5.99$",
     rating: 5,
     discount: 0,
     image: "./Assets/images/Arr_image/21.png",
   },
   {
     id: 21,
-    name: "Ketchup",
-    category: "Dairy",
-    description:
-      "Ketchup is a tangy sauce made from tomatoes, vinegar, sugar, and spices.",
-    price: "77.50$",
+    name: "Banana",
+    category: "Fruits",
+    description: "С ботанической точки зрения банан является ягодой.",
+    price: "2.99$",
     rating: 5,
     discount: 0,
     image: "./Assets/images/Arr_image/22.png",
@@ -452,7 +414,7 @@ const categories = [
 document.getElementById("root").innerHTML = categories
   .map((item) => {
     let { image, description, price, discount } = item;
-    if (item.discount > 0) {
+    if (item.discount !== 0) {
       return `
         <div class="promotion__cards">
           <img class="img" src="${image}" alt="" />
@@ -477,7 +439,6 @@ document.getElementById("root").innerHTML = categories
         </div>`;
     }
   })
-  .slice(-10)
   .join("");
 function getRating(rating) {
   let res = "";
@@ -509,19 +470,19 @@ const highsRatingCards = (product) => {
 
   return product;
 };
-highsRatingCards(product).slice(-6);
+highsRatingCards(product);
 
 const products2 = [
   ...new Set(
-    news.map((item) => {
+    product.map((item) => {
       return item;
     })
   ),
 ];
-document.getElementById("newsCards").innerHTML = products2
+document.getElementById("newsCards").innerHTML = product
   .map((item) => {
     let { image, description, price } = item;
-    if (item.discount > 0) {
+    if (item.rating <= 4) {
       return `
       <div class="new__card">
       <img class="img" src=${image} alt="" />
@@ -534,7 +495,6 @@ document.getElementById("newsCards").innerHTML = products2
     </div>`;
     }
   })
-  .slice(-10)
   .join("");
 function getRating(rating) {
   let res = "";
@@ -570,15 +530,15 @@ lowerRatingCards(product).slice(-6);
 
 const products3 = [
   ...new Set(
-    recently.map((item) => {
+    product.map((item) => {
       return item;
     })
   ),
 ];
-document.getElementById("before").innerHTML = products3
+document.getElementById("before").innerHTML = product
   .map((item) => {
     let { image, description, price } = item;
-    if (item.discount > 0) {
+    if (item.discount == 0 && item.rating <= 5) {
       return `
       <div class="new__card">
       <img class="img" src=${image} alt="" />
@@ -620,7 +580,7 @@ function getRating(rating) {
 /*---------------SPECIAL---------------*/
 const products4 = [
   ...new Set(
-    specialOffers.map((item) => {
+    product.map((item) => {
       return item;
     })
   ),

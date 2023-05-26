@@ -7,7 +7,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100000000000000000000;
+  z-index: 1000;
   .header {
     @include flexbox(row, space-between, center);
     gap: 10px;
@@ -112,6 +112,7 @@ img {
     @include flexbox(row, space-between, center);
     gap: 40px;
     .promotion__cards {
+      margin-bottom: 60px;
       max-width: 272px;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
@@ -178,7 +179,7 @@ img {
 
 /* --------------------------------- */
 #new {
-  padding: 120px 0 40px;
+  padding: 60px 0 40px;
   .new {
     .new__title {
       @include flexbox(row, space-between, end);
@@ -200,6 +201,7 @@ img {
   .new__box {
     @include flexbox(row, space-between, center);
     .new__card {
+      margin-bottom: 60px;
       max-width: 272px;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
@@ -393,9 +395,8 @@ img {
   position: fixed;
   padding: 20px 0 40px;
   transition: 0.8s ease all;
-  animation: inputHighlighter 0.3s ease;
   top: -300px;
-  z-index: -200;
+  z-index: -10;
   width: 100%;
   left: 0;
   right: 0;
