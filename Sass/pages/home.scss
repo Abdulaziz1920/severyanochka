@@ -3,6 +3,8 @@
 header {
   background-color: $surface;
   padding: 16px 0;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+
   position: fixed;
   top: 0;
   left: 0;
@@ -118,6 +120,8 @@ img {
       border-radius: 4px;
       background-color: $surface;
       transition: 0.3s;
+      margin: 0 auto;
+      position: relative;
       &:hover {
         box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
         border-radius: 4px;
@@ -125,7 +129,6 @@ img {
       .img {
         width: 100%;
         border-radius: 4px;
-        position: relative;
       }
       .discount {
         position: absolute;
@@ -176,7 +179,6 @@ img {
     }
   }
 }
-
 /* --------------------------------- */
 #new {
   padding: 60px 0 40px;

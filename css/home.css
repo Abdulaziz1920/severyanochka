@@ -553,6 +553,7 @@ table {
 header {
   background-color: #ffffff;
   padding: 16px 0;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -707,6 +708,8 @@ img {
   border-radius: 4px;
   background-color: #ffffff;
   transition: 0.3s;
+  margin: 0 auto;
+  position: relative;
 }
 #promotion-card .promotion__box .promotion__cards:hover {
   box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
@@ -715,7 +718,6 @@ img {
 #promotion-card .promotion__box .promotion__cards .img {
   width: 100%;
   border-radius: 4px;
-  position: relative;
 }
 #promotion-card .promotion__box .promotion__cards .discount {
   position: absolute;

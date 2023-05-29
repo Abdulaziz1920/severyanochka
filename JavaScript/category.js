@@ -1,5 +1,9 @@
-/*---------------ARRAY---------------*/
-// / хлеб
+let hamburger = document.querySelector(".hamburger");
+let wrapper = document.querySelector(".wrapper");
+
+hamburger.addEventListener("click", function () {
+  wrapper.classList.toggle("show");
+});
 const product = [
   {
     id: 1,
@@ -362,289 +366,188 @@ const product = [
     image: "https://i.postimg.cc/28zKmVj6/22.png",
   },
 ];
-const specialOffers = [
+const first_catalog = [
   {
-    id: 1,
-    title: "Оформите карту «Северяночка»",
-    text: "И получайте бонусы при покупке в магазинах и на сайте",
-    image: "Assets/images/home/card.png",
+    title: "Молоко сыр яйцо",
+    image: "https://i.postimg.cc/65Drhpjc/img.png",
   },
   {
-    id: 2,
-    title: "Покупайте акционные товары",
-    text: "И получайте вдвое больше бонусов",
-    image: "Assets/images/home/baskets.png",
-  },
-];
-const article = [
-  {
-    date: "05.03.2023",
-    article_title:
-      "Режим использования масок и перчаток на территории магазинов",
-    article_text:
-      'Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.',
-    image: "Assets/images/home/Status.png",
+    title: "Хлеб",
+    image: "https://i.postimg.cc/jdW6N7XC/img-1.png",
   },
   {
-    date: "05.03.2023",
-    article_title:
-      "Режим использования масок и перчаток на территории магазинов",
-    article_text:
-      'Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.',
-    image: "Assets/images/home/Status2.png",
-  },
-  {
-    date: "05.03.2023",
-    article_title:
-      "Режим использования масок и перчаток на территории магазинов",
-    article_text:
-      'Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.',
-    image: "Assets/images/home/Status3.png",
+    title: "Фрукты и овощи",
+    image: "https://i.postimg.cc/RCpQNRwj/img-2.png",
   },
 ];
-/*---------------ARRAY---------------*/
-/*---------------PROMOTION---------------*/
-const categories = [
+
+const second_catalog = [
+  {
+    title: "Замороженные продукты",
+    image: "https://i.postimg.cc/VN9WvPFR/img-3.png",
+  },
+  {
+    title: "Напитки",
+    image: "https://i.postimg.cc/8CgbTzLc/img-4.png",
+  },
+  {
+    title: "Кондитерские изделия",
+    image: "https://i.postimg.cc/QtXkWY4r/img-5.png",
+  },
+  {
+    title: "Чай, кофе",
+    image: "https://i.postimg.cc/kgbcrb6L/img-6.png",
+  },
+];
+
+const third_catalog = [
+  {
+    title: "Бакалея",
+    image: "https://i.postimg.cc/xT5LmPrv/img-12.png",
+  },
+  {
+    title: "Здоровое питание",
+    image: "https://i.postimg.cc/C1mCCCXn/img-7.png",
+  },
+  {
+    title: "Зоотовары",
+    image: "https://i.postimg.cc/TYS9H9wr/img-8.png",
+  },
+];
+
+const fourth_catalog = [
+  {
+    title: "Детское питание",
+    image: "https://i.postimg.cc/pXyCZ72W/img-9.png",
+  },
+  {
+    title: "Мясо, птица, колбаса",
+    image: "https://i.postimg.cc/Rhh7g6xs/img-10.png",
+  },
+  {
+    title: "Непродовольственные товары",
+    image: "https://i.postimg.cc/mZmV7RWp/img-11.png",
+  },
+];
+
+/* ---------------------first_catalog--------------------- */
+const catalogs1 = [
   ...new Set(
-    product.map((item) => {
+    first_catalog.map((item) => {
       return item;
     })
   ),
 ];
-document.getElementById("root").innerHTML = categories
+document.getElementById("row1").innerHTML = catalogs1
   .map((item) => {
-    let { image, description, price, discount } = item;
-    if (item.discount !== 0) {
-      return `
-        <div class="promotion__cards">
-          <img class="img" src="${image}" alt="" />
-          <p class="discount Text_S">-${discount}%</p>
-          <div class="promotion__price">
-            <div class="left">
-              <h4 class="Text-Bold_M">44,50 ₽</h4>
-              <p class="Text_XS">С картой</p>
-            </div>
-            <div class="right">
-              <h4 class="Text_S">${price}</h4>
-              <p class="Text_XS">Обычная</p>
-            </div>
-          </div>
-          <div class="promotion__text">
-            <p class="Text_S">${description}</p>
-          </div>
-          <div class="promotion__star">
-            ${getRating(item.rating)}
-          </div>
-          <button class="Text_S promotion_btn">В корзину</button>
-        </div>`;
-    }
+    let { image, title } = item;
+    return `              <div class="catalog__items">
+    <div class="item">
+      <img src="${image}" alt="" />
+      <h1 class="Text-Bold_M">${title}</h1>
+  </div>`;
   })
   .join("");
-function getRating(rating) {
-  let res = "";
-  let star_count = 0;
-  let full_star = parseInt(rating);
-  let rest_star = rating - full_star;
-  star_count = full_star;
-  res = Array(full_star)
-    .fill("<img src='Assets/icons/rating/full.svg'>")
-    .join("");
-  if (0.25 <= rest_star && rest_star <= 0.5) {
-    star_count++;
-    res += "<img src='Assets/icons/rating/half.svg'>";
-  }
-  if (0.5 < rest_star) {
-    star_count++;
-    res += "<img src='Assets/icons/rating/full.svg'>";
-  }
-  free_star = 5 - star_count;
-  res += Array(free_star)
-    .fill("<img src='Assets/icons/rating/empty.svg'>")
-    .join("");
-  return res;
-}
-/*---------------PROMOTION---------------*/
-/*---------------NEW---------------*/
-const highsRatingCards = (product) => {
-  product.sort((a, b) => b.rating - a.rating);
-
-  return product;
-};
-highsRatingCards(product);
-
-const products2 = [
+/* ---------------------first_catalog--------------------- */
+/* ---------------------second_catalog--------------------- */
+const catalogs2 = [
   ...new Set(
-    product.map((item) => {
+    second_catalog.map((item) => {
       return item;
     })
   ),
 ];
-document.getElementById("newsCards").innerHTML = product
+document.getElementById("row2").innerHTML = catalogs2
   .map((item) => {
-    let { image, description, price } = item;
-    if (item.rating <= 4) {
-      return `
-      <div class="new__card">
-      <img class="img" src=${image} alt="" />
-      <h4 class="Text-Bold_M">${price}</h4>
-      <p class="Text_S">${description}</p>
-      <div class="new_star">
-      ${getRating(item.rating)}
-      </div>
-      <button class="Text_S new_btn">В корзину</button>
+    let { image, title } = item;
+    return `              <div class="catalog__items">
+      <div class="item">
+        <img src="${image}" alt="" />
+        <h1 class="Text-Bold_M">${title}</h1>
     </div>`;
-    }
   })
   .join("");
-function getRating(rating) {
-  let res = "";
-  let star_count = 0;
-  let full_star = parseInt(rating);
-  let rest_star = rating - full_star;
-  star_count = full_star;
-  res = Array(full_star)
-    .fill("<img src='Assets/icons/rating/full.svg'>")
-    .join("");
-  if (0.25 <= rest_star && rest_star <= 0.5) {
-    star_count++;
-    res += "<img src='Assets/icons/rating/half.svg'>";
-  }
-  if (0.5 < rest_star) {
-    star_count++;
-    res += "<img src='Assets/icons/rating/full.svg'>";
-  }
-  free_star = 5 - star_count;
-  res += Array(free_star)
-    .fill("<img src='Assets/icons/rating/empty.svg'>")
-    .join("");
-  return res;
-}
-/*---------------NEW---------------*/
-/*---------------BEFORE---------------*/
-const lowerRatingCards = (product) => {
-  product.sort((a, b) => a.rating - b.rating);
-
-  return product;
-};
-lowerRatingCards(product).slice(-6);
-
-const products3 = [
+/* ---------------------second_catalog--------------------- */
+/* ---------------------third_catalog--------------------- */
+const catalogs3 = [
   ...new Set(
-    product.map((item) => {
+    third_catalog.map((item) => {
       return item;
     })
   ),
 ];
-document.getElementById("before").innerHTML = product
+document.getElementById("row3").innerHTML = catalogs3
   .map((item) => {
-    let { image, description, price } = item;
-    if (item.discount == 0 && item.rating <= 5) {
-      return `
-      <div class="new__card">
-      <img class="img" src=${image} alt="" />
-      <h4 class="Text-Bold_M">${price}</h4>
-      <p class="Text_S">${description}</p>
-      <div class="new_star">
-      ${getRating(item.rating)}
-      </div>
-      <button class="Text_S new_btn">В корзину</button>
-    </div>`;
-    }
-  })
-  .slice(-20)
-  .join("");
-function getRating(rating) {
-  let res = "";
-  let star_count = 0;
-  let full_star = parseInt(rating);
-  let rest_star = rating - full_star;
-  star_count = full_star;
-  res = Array(full_star)
-    .fill("<img src='Assets/icons/rating/full.svg'>")
-    .join("");
-  if (0.25 <= rest_star && rest_star <= 0.5) {
-    star_count++;
-    res += "<img src='Assets/icons/rating/half.svg'>";
-  }
-  if (0.5 < rest_star) {
-    star_count++;
-    res += "<img src='Assets/icons/rating/full.svg'>";
-  }
-  free_star = 5 - star_count;
-  res += Array(free_star)
-    .fill("<img src='Assets/icons/rating/empty.svg'>")
-    .join("");
-  return res;
-}
-/*---------------BEFORE---------------*/
-/*---------------SPECIAL---------------*/
-const products4 = [
-  ...new Set(
-    product.map((item) => {
-      return item;
-    })
-  ),
-];
-document.getElementById("special").innerHTML = specialOffers
-  .map((item) => {
-    let { image, title, text } = item;
-    if (item.id === 1) {
-      return `
-      <div class="special__item lefts">
-      <div class="special__offers__title">
-        <h1 class="Header_S">${title}</h1>
-        <p class="Text_S">
-         ${text}
-        </p>
-      </div>
-      <div class="special__offers__image">
-        <img src=${image} alt="" />
-      </div>
-    </div>`;
-    } else if (item.id === 2) {
-      return `<div class="special__item rights">
-        <div class="special__offers__title">
-          <h1 class="Header_S">${title}</h1>
-          <p class="Text_S">${text}</p>
-        </div>
-        <div class="special__offers__image">
-          <img src=${image} alt="" />
-        </div>
+    let { image, title } = item;
+    return `              <div class="catalog__items">
+        <div class="item">
+          <img src="${image}" alt="" />
+          <h1 class="Text-Bold_M">${title}</h1>
       </div>`;
-    }
   })
   .join("");
-/*---------------SPECIAL---------------*/
-/*---------------ARTICLE---------------*/
-const products5 = [
+/* ---------------------third_catalog--------------------- */
+/* ---------------------fourth_catalog--------------------- */
+const catalogs4 = [
   ...new Set(
-    article.map((item) => {
+    fourth_catalog.map((item) => {
       return item;
     })
   ),
 ];
-document.getElementById("article").innerHTML = article
+document.getElementById("row4").innerHTML = catalogs4
   .map((item) => {
-    let { date, article_text, article_title, image } = item;
-
-    return `<div class="articles__cards">
-    <img src=${image} alt="" />
-    <h5 class="Text_XS">${date}</h5>
-    <h2 class="Header_XS">${article_title}</h2>
-    <p class="Text_S">
-      ${article_text}
-    </p>
-    <button class="Text_S articles_btn">Подробнее</button>
-  </div>
-      `;
+    let { image, title } = item;
+    return `              <div class="catalog__items">
+          <div class="item">
+            <img src="${image}" alt="" />
+            <h1 class="Text-Bold_M">${title}</h1>
+        </div>`;
   })
-  .slice(-3)
   .join("");
-/*---------------ARTICLE---------------*/
-
-let hamburger = document.querySelector(".hamburger");
-let wrapper = document.querySelector(".wrapper");
-
-hamburger.addEventListener("click", function () {
-  wrapper.classList.toggle("show");
-});
+/* ---------------------fourth_catalog--------------------- */
+/* ---------------------All Products--------------------- */
+const All = [
+  ...new Set(
+    product.map((item) => {
+      return item;
+    })
+  ),
+];
+document.getElementById("allproducts").innerHTML = All.map((item) => {
+  let { image, price, description } = item;
+  return `
+  <div class="all__cards">
+  <img src="${image}" alt="" />
+  <h3 class="Text-Bold_M">${price}$</h3>
+  <p class="Text_S">${description}</p>
+  <div class="star">
+  ${getRating(item.rating)}
+  </div>
+  <button class="Text_S new_btn">В корзину</button>
+</div>`;
+}).join("");
+function getRating(rating) {
+  let res = "";
+  let star_count = 0;
+  let full_star = parseInt(rating);
+  let rest_star = rating - full_star;
+  star_count = full_star;
+  res = Array(full_star)
+    .fill("<img src='Assets/icons/rating/full.svg'>")
+    .join("");
+  if (0.25 <= rest_star && rest_star <= 0.5) {
+    star_count++;
+    res += "<img src='Assets/icons/rating/half.svg'>";
+  }
+  if (0.5 < rest_star) {
+    star_count++;
+    res += "<img src='Assets/icons/rating/full.svg'>";
+  }
+  free_star = 5 - star_count;
+  res += Array(free_star)
+    .fill("<img src='Assets/icons/rating/empty.svg'>")
+    .join("");
+  return res;
+}
+/* ---------------------All Products--------------------- */
