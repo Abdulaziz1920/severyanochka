@@ -648,22 +648,55 @@ header .header .user {
   padding: 144px 0 50px;
 }
 
-.pagination {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.simple-pagination ul {
+  margin: 50px 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
 }
-.pagination ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
+
+.simple-pagination li {
+  display: inline-block;
+  margin-right: 55px;
 }
-.pagination ul li:hover {
-  color: #ff6633;
-  cursor: pointer;
+@media only screen and (max-width: 900px) {
+  .simple-pagination li {
+    margin-right: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .simple-pagination li {
+    margin-right: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .simple-pagination li {
+    margin-right: 5px;
+  }
+}
+
+.simple-pagination li a,
+.simple-pagination li span {
+  color: #666;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px #eee;
+}
+
+.simple-pagination .current {
+  color: #fff;
+  background-color: #ff7182;
+  border-color: #ff7182;
+  border-radius: 50%;
+  transition: 0.3s ease-out;
+}
+
+.simple-pagination .prev.current,
+.simple-pagination .next.current {
+  background: #e04e60;
+  transition: 0.3s ease-out;
 }
 
 /* --------------------------------- */

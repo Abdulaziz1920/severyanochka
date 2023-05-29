@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/a01ca13418.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Header Top Start-->
@@ -153,26 +154,7 @@
       </section>
       <section>
         <div class="container">
-          <div class="pagination">
-            <ul class="pages">
-              <li class="page-item">
-                <span
-                  ><i
-                    class="fa-solid fa-angles-left page-link"
-                    style="color: #3c3c3c"
-                  ></i
-                ></span>
-              </li>
-              <li class="page-item">
-                <span
-                  ><i
-                    class="fa-solid fa-angles-right page-link"
-                    style="color: #3c3c3c"
-                  ></i
-                ></span>
-              </li>
-            </ul>
-          </div>
+          <div id="pagination-container"></div>
         </div>
       </section>
     </main>
@@ -224,6 +206,26 @@
     <!-- Javascript Links -->
     <script src="JavaScript/home.js"></script>
     <script src="JavaScript/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+    <script>
+      var items = $("#allproducts .card");
+      var numItems = items.length;
+      var perPage = 8;
+
+      items.slice(perPage).hide();
+
+      $("#pagination-container").pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+          var showFrom = perPage * (pageNumber - 1);
+          var showTo = showFrom + perPage;
+          items.hide().slice(showFrom, showTo).show();
+        },
+      });
+    </script>
     <!-- Javascript Links -->
   </body>
 </html>

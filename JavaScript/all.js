@@ -62,12 +62,3 @@ searchEl.addEventListener("keyup", function () {
   getProducst(searchProducts);
 });
 
-for (let i = 1; i <= TotalPage; i++) {
-  pgntList += `
-    <li class="page-item">
-      <span class="page-link">${i}</span>
-    </li>
-  `;
-}
-
-pagination.innerHTML = pgntList;
