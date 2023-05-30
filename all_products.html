@@ -19,7 +19,7 @@
         <div class="header">
           <div class="logotype">
             <img src="Assets/icons/header__icon/Group.png" alt="" />
-            <a href="#">Северяночка</a>
+            <a href="index.html">Северяночка</a>
           </div>
           <div class="catalog">
             <img
@@ -58,7 +58,7 @@
                 </div>
               </div>
             </section>
-            <h2 class="Text_S">Каталог</h2>
+            <a class="Text_S linksToCatalog" href="catalog.html">Каталог</a>
           </div>
           <div class="search">
             <div class="InputContainer">
@@ -90,15 +90,15 @@
           </div>
           <div class="navigation">
             <div class="nav">
-              <img src="Assets/icons/header__icon/like.png" alt="" />
+              <img src="Assets/icons/header__icon/like.svg" alt="" />
               <h4>Избранное</h4>
             </div>
             <div class="nav">
-              <img src="Assets/icons/header__icon/box.png" alt="" />
+              <img src="Assets/icons/header__icon/box.svg" alt="" />
               <h4>Продукты</h4>
             </div>
             <div class="nav">
-              <img src="Assets/icons/header__icon/basket.png" alt="" />
+              <img src="Assets/icons/header__icon/basket.svg" alt="" />
               <h4>Корзина</h4>
             </div>
           </div>
@@ -140,6 +140,7 @@
     <!-- Header Footer End -->
     <!-- Main -->
     <main>
+      <!-- All Products Title -->
       <section>
         <div class="container">
           <div class="all__products__title">
@@ -147,16 +148,20 @@
           </div>
         </div>
       </section>
+      <!-- All Products Title -->
+      <!-- All Products Cards -->
       <section>
         <div class="container">
           <div id="allproducts" class="all__products"></div>
         </div>
+        <div id="pagination-container"></div>
       </section>
+      <!-- All Products Cards -->
+      <!-- All Products Pagianation -->
       <section>
-        <div class="container">
-          <div id="pagination-container"></div>
-        </div>
+        <div class="container"></div>
       </section>
+      <!-- All Products Pagianation -->
     </main>
     <!-- Main -->
     <!-- Footer -->
@@ -204,11 +209,14 @@
     </footer>
     <!-- Footer -->
     <!-- Javascript Links -->
-    <script src="JavaScript/home.js"></script>
-    <script src="JavaScript/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+    <script src="JavaScript/homePageArray.js"></script>
+    <script src="JavaScript/allProductsPageArray.js"></script>
+    <script src="JavaScript/dropdown.js"></script>
+    <script src="JavaScript/search.js"></script>
     <script>
-      var items = $("#allproducts .card");
+      var items = $("#allproducts .all__cards");
       var numItems = items.length;
       var perPage = 8;
 

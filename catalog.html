@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог || Северяночка</title>
-    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/catalog.css" />
   </head>
   <body>
     <!-- Header Top Start-->
@@ -14,7 +14,7 @@
         <div class="header">
           <div class="logotype">
             <img src="Assets/icons/header__icon/Group.png" alt="" />
-            <a href="#">Северяночка</a>
+            <a href="index.html">Северяночка</a>
           </div>
           <div class="catalog">
             <img
@@ -53,14 +53,14 @@
                 </div>
               </div>
             </section>
-            <h2 class="Text_S">Каталог</h2>
+            <a class="Text_S linksToCatalog" href="catalog.html">Каталог</a>
           </div>
           <div class="search">
             <div class="InputContainer">
               <input
                 type="text"
                 name="text"
-                class="input"
+                class="input search__input"
                 id="input"
                 placeholder="Search"
               />
@@ -135,6 +135,7 @@
     <!-- Header Footer End -->
     <!-- Main -->
     <main>
+      <!-- BREADCRUMB -->
       <section>
         <div class="container">
           <section>
@@ -142,12 +143,14 @@
               <div class="breadcrumb">
                 <a class="Text_XS" href="index.html">Главная</a>
                 <img src="Assets/icons/header__icon/shape__next.png" alt="" />
-                <a class="Text_XS active" href="№">Каталог</a>
+                <a class="Text_XS active" href="catalog.html">Каталог</a>
               </div>
             </div>
           </section>
         </div>
       </section>
+      <!-- BREADCRUMB -->
+      <!-- Catalog Title -->
       <section>
         <div class="container">
           <div class="catalogs">
@@ -157,6 +160,8 @@
           </div>
         </div>
       </section>
+      <!-- Catalog Title -->
+      <!-- Catalog Cards -->
       <section>
         <div class="container">
           <div class="catalog">
@@ -169,6 +174,7 @@
           </div>
         </div>
       </section>
+      <!-- Catalog Cards -->
     </main>
     <!-- Main -->
     <!-- Footer -->
@@ -216,8 +222,8 @@
     </footer>
     <!-- Footer -->
     <!-- Javascript Links -->
-    <script src="JavaScript/category.js"></script>
-    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/catalogPageArray.js"></script>
+    <script src="JavaScript/dropdown.js"></script>
     <!-- Javascript Links -->
   </body>
 </html>

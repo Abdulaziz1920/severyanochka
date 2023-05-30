@@ -76,6 +76,7 @@ pre {
    */
 a {
   background-color: transparent;
+  color: #414141;
 }
 
 /**
@@ -373,6 +374,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_XS {
@@ -381,6 +383,7 @@ table {
   line-height: 150%;
   font-family: "Roboto";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_S {
@@ -389,6 +392,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_S {
@@ -397,6 +401,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_M {
@@ -405,6 +410,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_M {
@@ -413,6 +419,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_L {
@@ -421,6 +428,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_L {
@@ -429,6 +437,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_L2 {
@@ -437,6 +446,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_M {
@@ -445,6 +455,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_S {
@@ -453,6 +464,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_L {
@@ -461,6 +473,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_XL {
@@ -469,6 +482,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_XS {
@@ -477,6 +491,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .InputContainer {

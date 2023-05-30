@@ -1,9 +1,5 @@
 let searchEl = document.querySelector(".search__input");
 let pagination = document.querySelector("pages");
-let TotalPageEl = 6;
-let active = 1;
-let TotalPage = Math.ceil(product.length / TotalPageEl);
-let pgntList = "";
 /* ---------------------All Products--------------------- */
 const All = [
   ...new Set(
@@ -53,12 +49,12 @@ function getRating(rating) {
   return res;
 }
 /* ---------------------All Products--------------------- */
+let searchProducts = document.querySelector(".search__input");
 
-searchEl.addEventListener("keyup", function () {
-  let search = this.value.trim().toLowerCase();
-  let searchProducts = product.filter((el) =>
-    el.name.toLowerCase().includes(search)
+searchProducts.addEventListener("keyup", function () {
+  let searchLabel = this.value.trim().toLowerCase();
+  let searchResult = product.filter((el) =>
+    el.name.toLowerCase().includes(searchLabel)
   );
-  getProducst(searchProducts);
+  getProducst(searchResult);
 });
-

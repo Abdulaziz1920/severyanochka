@@ -76,6 +76,7 @@ pre {
    */
 a {
   background-color: transparent;
+  color: #414141;
 }
 
 /**
@@ -373,6 +374,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_XS {
@@ -381,6 +383,7 @@ table {
   line-height: 150%;
   font-family: "Roboto";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_S {
@@ -389,6 +392,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_S {
@@ -397,6 +401,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_M {
@@ -405,6 +410,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_M {
@@ -413,6 +419,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_L {
@@ -421,6 +428,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text-Bold_L {
@@ -429,6 +437,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Text_L2 {
@@ -437,6 +446,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_M {
@@ -445,6 +455,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_S {
@@ -453,6 +464,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_L {
@@ -461,6 +473,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_XL {
@@ -469,6 +482,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .Header_XS {
@@ -477,6 +491,7 @@ table {
   line-height: 150%;
   font-family: "Rubik";
   font-style: normal;
+  color: #414141;
 }
 
 .InputContainer {
@@ -551,14 +566,14 @@ table {
 
 /* --------------------------------- */
 header {
-  background-color: #ffffff;
-  padding: 16px 0;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  padding: 16px 0;
   z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
 }
 header .header {
   display: flex;
@@ -576,7 +591,6 @@ header .header .logotype {
   gap: 11.41px;
 }
 header .header .logotype a {
-  color: #414141;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -585,12 +599,12 @@ header .header .catalog {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
   gap: 10px;
+  padding: 8px;
   border-radius: 4px;
   background-color: #70c05b;
 }
-header .header .catalog h2 {
+header .header .catalog .linksToCatalog {
   color: #ffffff;
 }
 header .header .navigation {
@@ -607,6 +621,12 @@ header .header .navigation .nav {
   align-items: center;
   gap: 8px;
 }
+header .header .navigation .nav img {
+  transition: 0.3s;
+}
+header .header .navigation .nav img:hover {
+  transform: scale(1.3);
+}
 header .header .user {
   display: flex;
   flex-direction: row;
@@ -617,13 +637,13 @@ header .header .user {
 
 /* --------------------------------- */
 .nav__footer {
-  background-color: #ffffff;
   position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
   padding: 8px 0;
   z-index: 100;
+  background-color: #ffffff;
 }
 .nav__footer .nav__item__footer {
   display: flex;
@@ -639,16 +659,13 @@ header .header .user {
   align-items: center;
   gap: 4px;
 }
-.nav__footer .nav__item__footer .nav__item a {
-  color: #414141;
-}
 
 /* --------------------------------- */
 #delivery {
   background-image: url(/Assets/images/home/head-backround.png);
-  background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 #delivery .banner {
   display: flex;
@@ -661,9 +678,6 @@ header .header .user {
 #delivery .banner img {
   width: 30%;
 }
-#delivery .banner h1 {
-  color: #414141;
-}
 
 /* --------------------------------- */
 #promotion {
@@ -674,9 +688,6 @@ header .header .user {
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
-}
-#promotion .promotion .promotion__title h1 {
-  color: #414141;
 }
 #promotion .promotion .promotion__title .promotion__link {
   display: flex;
@@ -702,18 +713,18 @@ img {
   gap: 40px;
 }
 #promotion-card .promotion__box .promotion__cards {
-  margin-bottom: 60px;
+  position: relative;
   max-width: 272px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 60px;
   border-radius: 4px;
   background-color: #ffffff;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  margin: 0 auto;
-  position: relative;
 }
 #promotion-card .promotion__box .promotion__cards:hover {
-  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
   border-radius: 4px;
+  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
 }
 #promotion-card .promotion__box .promotion__cards .img {
   width: 100%;
@@ -723,9 +734,9 @@ img {
   position: absolute;
   left: 10px;
   top: 120px;
-  background: #ff6633;
-  border-radius: 4px;
   padding: 4px 8px;
+  border-radius: 4px;
+  background: #ff6633;
   color: white;
 }
 #promotion-card .promotion__box .promotion__cards .promotion__price {
@@ -735,15 +746,16 @@ img {
   align-items: center;
   padding: 8px;
 }
-#promotion-card .promotion__box .promotion__cards .promotion__price h4 {
-  color: #414141;
-}
 #promotion-card .promotion__box .promotion__cards .promotion__price p {
   color: #bfbfbf;
 }
 #promotion-card .promotion__box .promotion__cards .promotion__text p {
   max-width: 256px;
-  padding: 8px;
+  padding-left: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 #promotion-card .promotion__box .promotion__cards .promotion__star {
   padding: 0px 0px 8px 8px;
@@ -753,12 +765,12 @@ img {
   width: 16px;
 }
 #promotion-card .promotion__box .promotion__cards .promotion_btn {
-  border: 1px solid #70c05b;
-  border-radius: 4px;
-  width: 94%;
-  padding: 8px;
-  background-color: transparent;
   margin: 0px 8px 8px 8px;
+  padding: 8px;
+  width: 94%;
+  border-radius: 4px;
+  border: 1px solid #70c05b;
+  background-color: transparent;
   transition: 0.3s;
 }
 #promotion-card .promotion__box .promotion__cards .promotion_btn:hover {
@@ -777,18 +789,12 @@ img {
   justify-content: space-between;
   align-items: end;
 }
-#new .new .new__title h1 {
-  color: #414141;
-}
 #new .new .new__title .new__link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-}
-#new .new .new__title .new__link a {
-  color: #414141;
 }
 
 /* --------------------------------- */
@@ -818,13 +824,15 @@ img {
   width: 100%;
 }
 #new-card .new__box .new__card h4 {
-  color: #414141;
   padding: 8px 0 24px 8px;
 }
 #new-card .new__box .new__card p {
   max-width: 256px;
   padding-left: 8px;
-  color: #414141;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 #new-card .new__box .new__card .new_star {
   padding: 8px;
@@ -854,9 +862,6 @@ img {
 #Our_Stores .our__stores .our__stores__title {
   padding: 120px 0 40px;
 }
-#Our_Stores .our__stores .our__stores__title h1 {
-  color: #414141;
-}
 
 /* --------------------------------- */
 .aplist_custom {
@@ -867,17 +872,18 @@ img {
   gap: 24px;
 }
 .aplist_custom .aplist .ap-tab-link {
-  background: #f3f2f1;
+  padding: 10px;
   border-radius: 4px;
   color: #606060;
-  padding: 10px;
+  background: #f3f2f1;
 }
 
+/* --------------------------------- */
 .aplist_custom .aplist .ap-tab-link.active-tab {
   padding: 10px;
+  border-radius: 4px;
   color: #ffffff;
   background: #70c05b;
-  border-radius: 4px;
 }
 
 /* --------------------------------- */
@@ -900,17 +906,16 @@ img {
 }
 .special__offers .special__item .special__offers__title h1 {
   max-width: 258px;
-  color: #414141;
 }
 .special__offers .special__item .special__offers__title p {
   max-width: 258px;
-  color: #414141;
 }
 
+/* --------------------------------- */
 .lefts {
-  background: #fcd5ba;
   border-radius: 4px;
   transition: 0.3s;
+  background: #fcd5ba;
 }
 .lefts:hover {
   box-shadow: 0px 8px 16px rgba(202, 147, 96, 0.5);
@@ -919,11 +924,12 @@ img {
   width: 100%;
 }
 
+/* --------------------------------- */
 .rights {
-  background: #e5ffde;
+  background-image: url(/Assets/images/home/banner.png);
   border-radius: 4px;
   transition: 0.3s;
-  background-image: url(/Assets/images/home/banner.png);
+  background: #e5ffde;
 }
 .rights:hover {
   box-shadow: 0px 8px 16px rgba(202, 147, 96, 0.5);
@@ -947,14 +953,14 @@ img {
 }
 #articles .articles .articles__cards {
   max-width: 376px;
-  background: #ffffff;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
   transition: 0.3s;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
 }
 #articles .articles .articles__cards:hover {
-  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
   border-radius: 4px;
+  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
 }
 #articles .articles .articles__cards img {
   width: 100%;
@@ -965,12 +971,10 @@ img {
 }
 #articles .articles .articles__cards h2 {
   max-width: 356px;
-  color: #414141;
   padding-left: 10px;
 }
 #articles .articles .articles__cards p {
   max-width: 356px;
-  color: #414141;
   text-align: justify;
   padding: 10px 10px 0 10px;
 }
@@ -996,17 +1000,18 @@ img {
   top: 80px !important;
 }
 
+/* --------------------------------- */
 .wrapper {
-  opacity: 0;
   position: fixed;
-  padding: 20px 0 40px;
-  transition: 0.8s ease all;
   top: -300px;
-  z-index: -10;
-  width: 100%;
   left: 0;
   right: 0;
+  padding: 20px 0 40px;
+  width: 100%;
+  opacity: 0;
+  z-index: -10;
   background: #fff;
+  transition: 0.8s ease all;
 }
 .wrapper .Dropdown {
   display: grid;
@@ -1022,7 +1027,6 @@ img {
   gap: 30px;
 }
 .wrapper .drops a {
-  color: #414141;
   transition: 0.2s;
 }
 .wrapper .drops a:hover {
@@ -1058,9 +1062,6 @@ footer .footer .logotype__nav ul {
   align-items: center;
   gap: 40px;
 }
-footer .footer .logotype__nav ul li a {
-  color: #414141;
-}
 footer .footer .logotype__social {
   display: flex;
   flex-direction: row;
@@ -1081,9 +1082,6 @@ footer .footer .logotype__social .number {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-}
-footer .footer .logotype__social .number a {
-  color: #414141;
 }
 
 /* --------------------------------- */
