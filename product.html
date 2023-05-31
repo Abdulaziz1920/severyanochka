@@ -7,6 +7,10 @@
     <title>Товар || Северяночка</title>
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="https://cdnjs.com/libraries/font-awesome" />
+    <link rel="stylesheet" href="InterCss/demo.css" />
+    <link rel="stylesheet" href="InterCss/intlTelInput.css" />
+    <link rel="stylesheet" href="css/popup.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -29,7 +33,7 @@
         <div class="header">
           <div class="logotype">
             <img src="Assets/icons/header__icon/Group.png" alt="" />
-            <a href="#">Северяночка</a>
+            <a href="index.html">Северяночка</a>
           </div>
           <div class="catalog">
             <img
@@ -114,13 +118,45 @@
           </div>
           <div class="user">
             <img src="Assets/icons/header__icon/avatar.png" alt="" />
-            <h3>Алексей</h3>
+            <h3 class="open">Алексей</h3>
             <img src="Assets/icons/header__icon/shape.png" alt="" />
           </div>
         </div>
       </div>
     </header>
     <!-- Header Top End-->
+    <!-- Popup -->
+    <div class="popup">
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="popup__content">
+            <div class="popup__exit">
+              <p>X</p>
+            </div>
+            <div class="popup__title">
+              <h1 class="Header_S">Вход</h1>
+            </div>
+            <div class="popup__input">
+              <form action="#">
+                <input type="tel" id="phone" placeholder="Телефон" />
+              </form>
+            </div>
+            <div class="popup__btn">
+              <button class="Text_L">Вход</button>
+            </div>
+            <div class="popup__footer">
+              <div class="registration">
+                <h3 class="Text_XS">Регистрация</h3>
+              </div>
+              <div class="password">
+                <h3 class="Text_XS">Забыли пароль?</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup -->
     <!-- Header Footer Start -->
     <div class="nav__footer">
       <div class="container">
@@ -264,6 +300,9 @@
       <!-- GOOD CARDS -->
       <section>
         <div class="container">
+          <div class="goods__title">
+            <h1 class="Header_M">С этим товаров покупают</h1>
+          </div>
           <div id="goods" class="good__cards owl-carousel owl-theme"></div>
         </div>
       </section>
@@ -362,5 +401,13 @@
     <script src="JavaScript/dropdown.js"></script>
     <script src="JavaScript/productsPageArray.js"></script>
     <script src="JavaScript/owl_carousel.js"></script>
+    <!-- InterTelJS -->
+    <script src="JavaScript/intlTelInput.js"></script>
+    <script>
+      var input = document.querySelector("#phone");
+      window.intlTelInput(input, {});
+    </script>
+    <!-- InterTelJS -->
+    <script src="JavaScript/Popup.js"></script>
   </body>
 </html>

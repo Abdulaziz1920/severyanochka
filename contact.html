@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты || Северяночка</title>
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.com/libraries/font-awesome" />
+    <link rel="stylesheet" href="InterCss/demo.css" />
+    <link rel="stylesheet" href="InterCss/intlTelInput.css" />
+    <link rel="stylesheet" href="css/popup.css" />
   </head>
   <body>
     <!-- Header Top Start-->
@@ -14,18 +18,53 @@
         <div class="header">
           <div class="logotype">
             <img src="Assets/icons/header__icon/Group.png" alt="" />
-            <a href="#">Северяночка</a>
+            <a href="index.html">Северяночка</a>
           </div>
           <div class="catalog">
-            <img src="Assets/icons/header__icon/menu.png" alt="" />
-            <h2 class="Text_S">Каталог</h2>
+            <img
+              class="hamburger"
+              src="Assets/icons/header__icon/menu.png"
+              alt=""
+            />
+            <section>
+              <div class="wrapper">
+                <div class="container">
+                  <div class="Dropdown">
+                    <div class="drops">
+                      <a class="Text-Bold_S" href="#">Молоко, сыр, яйцо</a>
+                      <a class="Text-Bold_S" href="#">Хлеб</a>
+                      <a class="Text-Bold_S" href="#">Фрукты и овощи</a>
+                      <a class="Text-Bold_S" href="#">Замороженные продукты</a>
+                    </div>
+                    <div class="drops">
+                      <a class="Text-Bold_S" href="#">Напитки</a>
+                      <a class="Text-Bold_S" href="#">Кондитерские изделия</a>
+                      <a class="Text-Bold_S" href="#">Чай, кофе</a>
+                    </div>
+                    <div class="drops">
+                      <a class="Text-Bold_S" href="#">Бакалея</a>
+                      <a class="Text-Bold_S" href="#">Здоровое питание</a>
+                      <a class="Text-Bold_S" href="#">Зоотовары</a>
+                    </div>
+                    <div class="drops">
+                      <a class="Text-Bold_S" href="#"
+                        >Непродовольственные товары</a
+                      >
+                      <a class="Text-Bold_S" href="#">Детское питание</a>
+                      <a class="Text-Bold_S" href="#">Мясо, птица, колбаса</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <a class="Text_S linksToCatalog" href="catalog.html">Каталог</a>
           </div>
           <div class="search">
             <div class="InputContainer">
               <input
                 type="text"
                 name="text"
-                class="input"
+                class="input search__input"
                 id="input"
                 placeholder="Search"
               />
@@ -50,27 +89,59 @@
           </div>
           <div class="navigation">
             <div class="nav">
-              <img src="Assets/icons/header__icon/like.png" alt="" />
+              <img src="Assets/icons/header__icon/like.svg" alt="" />
               <h4>Избранное</h4>
             </div>
             <div class="nav">
-              <img src="Assets/icons/header__icon/box.png" alt="" />
+              <img src="Assets/icons/header__icon/box.svg" alt="" />
               <h4>Продукты</h4>
             </div>
             <div class="nav">
-              <img src="Assets/icons/header__icon/basket.png" alt="" />
+              <img src="Assets/icons/header__icon/basket.svg" alt="" />
               <h4>Корзина</h4>
             </div>
           </div>
           <div class="user">
             <img src="Assets/icons/header__icon/avatar.png" alt="" />
-            <h3>Алексей</h3>
+            <h3 class="open">Алексей</h3>
             <img src="Assets/icons/header__icon/shape.png" alt="" />
           </div>
         </div>
       </div>
     </header>
     <!-- Header Top End-->
+    <!-- Popup -->
+    <div class="popup">
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="popup__content">
+            <div class="popup__exit">
+              <p>X</p>
+            </div>
+            <div class="popup__title">
+              <h1 class="Header_S">Вход</h1>
+            </div>
+            <div class="popup__input">
+              <form action="#">
+                <input type="tel" id="phone" placeholder="Телефон" />
+              </form>
+            </div>
+            <div class="popup__btn">
+              <button class="Text_L">Вход</button>
+            </div>
+            <div class="popup__footer">
+              <div class="registration">
+                <h3 class="Text_XS">Регистрация</h3>
+              </div>
+              <div class="password">
+                <h3 class="Text_XS">Забыли пароль?</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popup -->
     <!-- Header Footer Start -->
     <div class="nav__footer">
       <div class="container">
@@ -313,6 +384,16 @@
     <!-- Footer -->
     <!-- Javascript Links -->
     <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+    <!-- Javascript Links -->
+    <script src="JavaScript/dropdown.js"></script>
+    <!-- InterTelJS -->
+    <script src="JavaScript/intlTelInput.js"></script>
+    <script>
+      var input = document.querySelector("#phone");
+      window.intlTelInput(input, {});
+    </script>
+    <!-- InterTelJS -->
+    <script src="JavaScript/Popup.js"></script>
     <!-- Javascript Links -->
   </body>
 </html>

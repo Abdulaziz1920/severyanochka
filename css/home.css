@@ -566,7 +566,7 @@ table {
 
 /* --------------------------------- */
 header {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
@@ -633,6 +633,9 @@ header .header .user {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+}
+header .header .user h3 {
+  cursor: pointer;
 }
 
 /* --------------------------------- */
