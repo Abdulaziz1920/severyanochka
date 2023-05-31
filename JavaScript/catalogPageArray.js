@@ -468,10 +468,10 @@ document.getElementById("row1").innerHTML = catalogs1
   .map((item) => {
     let { image, title } = item;
     return `
-    <div class="item">
+    <a href="product.html" class="item">
       <img src="${image}" alt="" />
       <h1 class="Text-Bold_M">${title}</h1>
-  </div>`;
+  </a>`;
   })
   .join("");
 /* ---------------------first_catalog--------------------- */
