@@ -676,4 +676,3 @@ document.getElementById("article").innerHTML = article
   .slice(-3)
   .join("");
 /*---------------ARTICLE---------------*/
-
